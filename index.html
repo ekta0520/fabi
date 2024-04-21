@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Website</title>
+    <link rel="stylesheet" href="C:\Users\Admin\Desktop\ekta.html\ekta.css\fabista.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Fashion World</h1>
+        <nav>
+            <ul>
+                <li><a href="C:\Users\Admin\Desktop\ekta.html\fabista1.html">Home</a></li>
+                <li><a href="C:\Users\Admin\Desktop\ekta.html\fabista4.html">About Us</a></li>
+                <li><a href="#">Fashion Tips</a></li>
+                <li><a href="#">Lookbook</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="C:\Users\Admin\Desktop\ekta.html\fabista4.html">Community</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="C:\Users\Admin\Desktop\ekta.html\fabista4.html">Contact</a></li>
+        
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">CUSTOM DREAMS</button>
+                <div class="dropdown-content">
+                    <a href="C:\Users\Admin\Desktop\ekta.html\fabista1.html">fab HOMES</a>
+                    <a href="C:\Users\Admin\Desktop\ekta.html\fabista2.html">fab FASHION</a>
+                    <a href="C:\Users\Admin\Desktop\ekta.html\fabista4.html">fab STORE</a>
+                </ul>
+                </div>
+            </div>
+            
+    </nav>
+    <div>
+    <footer>
+        <section id="chat-container">
+            <div id="chat-output"></div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </section>
+    </footer>
+
+    <footer>
+        <p>&copy; 2024 Fashion World. All rights reserved.</p>
+    </footer>
+</header>
+</div>
+<div class="cont">
+    <div class="image">
+        <img src="https://shop.thelabellife.com/cdn/shop/files/Desktop-HP_Vday_Malaika_cebc7897-916b-4d89-bc7e-974ddb53f98c.jpg?v=1707988711&width=1500" height="500px" width="1535px">
+    </div>
+</div>
+</nav>
+
+<footer>
+<section id="contact" class="content-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>For inquiries, feedback, or assistance, feel free to contact us:</p>
+        <ul>
+            <li>Email: info@fabista.com</li>
+            <li>Phone: +91-9198222420</li>
+            <li>Address: 123 Fashion Avenue, Chandigarh, Punjab</li>
+        </ul>
+        <p>&copy; 2024 Fabista. All rights reserved.</p>
+    </div>
+    </section>
+</footer>
+    <script>
+        
+
+const chatOutput = document.getElementById('chat-output');
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
+
+sendBtn.addEventListener('click', () => {
+    sendMessage(userInput.value);
+});
+
+userInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        sendMessage(userInput.value);
+    }
+});
+
+function sendMessage(message) {
+    if (message.trim() === '') return;
+
+    const userMessage = document.createElement('div');
+    userMessage.classList.add('message', 'user-message');
+    userMessage.textContent = message;
+    chatOutput.appendChild(userMessage);
+    chatOutput.scrollTop = chatOutput.scrollHeight; // Scroll to bottom
+
+    // Simulate AI response (replace this with actual AI interaction)
+    const aiResponse = document.createElement('div');
+    aiResponse.classList.add('message', 'ai-response');
+    aiResponse.textContent = 'BOT: Thank you for your message.Our representative will join you shortly!';
+    chatOutput.appendChild(aiResponse);
+    chatOutput.scrollTop = chatOutput.scrollHeight; // Scroll to bottom
+
+    userInput.value = ''; // Clear input field after sending message
+}
+
+    </script>
+</body>
+</html>
